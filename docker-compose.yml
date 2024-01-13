@@ -1,0 +1,12 @@
+version: "3"
+services:
+  pintos:
+    container_name: pintos
+    image: pintos:latest
+    #build:
+      #context: .
+      #dockerfile: Dockerfile
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+    volumes:
+      - ./pintos:/pintos
