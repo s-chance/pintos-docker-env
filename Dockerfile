@@ -5,7 +5,7 @@ FROM ubuntu:18.04
 RUN apt-get update
 
 # 安装Pintos所需的依赖
-RUN apt-get install -y gcc make qemu-system clang  --no-install-recommends && \
+RUN apt-get install -y vim gcc make gdb qemu-system clang  --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
 
 # 将你的Pintos项目目录复制到Docker容器中
