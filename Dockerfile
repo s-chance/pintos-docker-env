@@ -4,7 +4,7 @@ FROM ubuntu:18.04
 # 更新Ubuntu的软件包列表，安装Pintos所需的依赖
 # 克隆并安装fzf到/usr/local
 RUN apt-get update && \
-    apt-get install -y vim gcc make gdb qemu-system clang git curl wget ca-certificates --no-install-recommends && \
+    apt-get install -y vim gcc make gdb cgdb qemu-system clang git curl wget ca-certificates --no-install-recommends && \
     git clone --depth 1 https://github.com/junegunn/fzf.git /usr/local/fzf && \
     /usr/local/fzf/install --all && \
     rm -rf /var/lib/apt/lists/*
